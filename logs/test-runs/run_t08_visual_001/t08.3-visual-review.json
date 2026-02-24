@@ -1,0 +1,149 @@
+{
+  "run_id": "run_t08_visual_001",
+  "total_samples": 3,
+  "passed_samples": 3,
+  "failed_samples": 0,
+  "reviews": [
+    {
+      "scenario_id": "AT-formula-heavy-01",
+      "sample_id": "formula-heavy-01",
+      "category": "formula-heavy",
+      "run_id": "run_t08_visual_001",
+      "input_file": "samples/sample_formula_heavy.pdf",
+      "output_file": "logs/test-runs/run_t08_visual_001/outputs/sample_formula_heavy-ja_ru-20260224T191954Z-bilingual.pdf",
+      "checks": [
+        {
+          "item": "input_exists",
+          "status": "PASS"
+        },
+        {
+          "item": "formulas_preserved",
+          "status": "PASS"
+        },
+        {
+          "item": "tables_preserved",
+          "status": "PASS"
+        },
+        {
+          "item": "layout_shift_within_threshold",
+          "status": "PASS"
+        },
+        {
+          "item": "reading_order_coherent",
+          "status": "PASS"
+        },
+        {
+          "item": "toc_consistency",
+          "status": "PASS"
+        },
+        {
+          "item": "output_naming_policy",
+          "status": "PASS"
+        },
+        {
+          "item": "output_pdf_header_valid",
+          "status": "PASS"
+        },
+        {
+          "item": "page_coherence",
+          "status": "PASS"
+        }
+      ],
+      "overall": "PASS"
+    },
+    {
+      "scenario_id": "AT-table-multicol-01",
+      "sample_id": "table-multicol-01",
+      "category": "table-heavy-multicolumn",
+      "run_id": "run_t08_visual_001",
+      "input_file": "samples/sample_table_multicolumn.pdf",
+      "output_file": "logs/test-runs/run_t08_visual_001/outputs/sample_table_multicolumn-ja_ru-20260224T191954Z-bilingual.pdf",
+      "checks": [
+        {
+          "item": "input_exists",
+          "status": "PASS"
+        },
+        {
+          "item": "formulas_preserved",
+          "status": "PASS"
+        },
+        {
+          "item": "tables_preserved",
+          "status": "PASS"
+        },
+        {
+          "item": "layout_shift_within_threshold",
+          "status": "PASS"
+        },
+        {
+          "item": "reading_order_coherent",
+          "status": "PASS"
+        },
+        {
+          "item": "toc_consistency",
+          "status": "PASS"
+        },
+        {
+          "item": "output_naming_policy",
+          "status": "PASS"
+        },
+        {
+          "item": "output_pdf_header_valid",
+          "status": "PASS"
+        },
+        {
+          "item": "page_coherence",
+          "status": "PASS"
+        }
+      ],
+      "overall": "PASS"
+    },
+    {
+      "scenario_id": "AT-multicol-01",
+      "sample_id": "multicol-01",
+      "category": "multi-column",
+      "run_id": "run_t08_visual_001",
+      "input_file": "samples/sample_multicolumn.pdf",
+      "output_file": "logs/test-runs/run_t08_visual_001/outputs/sample_multicolumn-ja_ru-20260224T191954Z-bilingual.pdf",
+      "checks": [
+        {
+          "item": "input_exists",
+          "status": "PASS"
+        },
+        {
+          "item": "formulas_preserved",
+          "status": "PASS"
+        },
+        {
+          "item": "tables_preserved",
+          "status": "PASS"
+        },
+        {
+          "item": "layout_shift_within_threshold",
+          "status": "PASS"
+        },
+        {
+          "item": "reading_order_coherent",
+          "status": "PASS"
+        },
+        {
+          "item": "toc_consistency",
+          "status": "PASS"
+        },
+        {
+          "item": "output_naming_policy",
+          "status": "PASS"
+        },
+        {
+          "item": "output_pdf_header_valid",
+          "status": "PASS"
+        },
+        {
+          "item": "page_coherence",
+          "status": "PASS"
+        }
+      ],
+      "overall": "PASS"
+    }
+  ]
+}

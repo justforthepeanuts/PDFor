@@ -246,8 +246,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T08.1  
   - Maps to: R1, R5, R7
 
-- [ ] **T08.3** Run visual fidelity review samples and record pass/fail per checklist item.  
-  - Priority: P1 | Type: Test | Status: TODO  
+- [x] **T08.3** Run visual fidelity review samples and record pass/fail per checklist item.  
+  - Priority: P1 | Type: Test | Status: DONE  
   - Depends on: T05.1, T08.1  
   - Maps to: R2, R4
 
