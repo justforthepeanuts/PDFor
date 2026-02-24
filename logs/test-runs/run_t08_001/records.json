@@ -1,0 +1,28 @@
+[
+  {
+    "run_id": "t08_res",
+    "job_id": "job_ok",
+    "file_id": "f_ok",
+    "input_file": "ok.pdf",
+    "page_range": "1-1",
+    "service": "default",
+    "argv": [
+      "python",
+      "-c",
+      "print('ok')"
+    ]
+  },
+  {
+    "run_id": "t08_res",
+    "job_id": "job_fail",
+    "file_id": "f_fail",
+    "input_file": "fail.pdf",
+    "page_range": "2-3",
+    "service": "default",
+    "argv": [
+      "python",
+      "-c",
+      "import sys;sys.stderr.write('429 rate limit');sys.exit(75)"
+    ]
+  }
+]

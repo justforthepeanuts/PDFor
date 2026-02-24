@@ -1,0 +1,13 @@
+[
+  {
+    "run_id": "t08_large",
+    "job_id": "job_0001",
+    "file_id": "file_large",
+    "input_file": "large.pdf",
+    "output_dir": "out",
+    "lang_in": "ja",
+    "lang_out": "ru",
+    "service": "default",
+    "page_range": "all"
+  }
+]

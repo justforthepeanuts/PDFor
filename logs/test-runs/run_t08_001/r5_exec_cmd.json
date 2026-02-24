@@ -1,0 +1,24 @@
+{
+  "cmd": [
+    "python",
+    "scripts/execute_with_resilience.py",
+    "logs/test-runs/run_t08_001/records.json",
+    "--service-config",
+    "logs/test-runs/run_t08_001/services.json",
+    "--output",
+    "logs/test-runs/run_t08_001/r5_results.json",
+    "--segments-out",
+    "logs/test-runs/run_t08_001/r5_segments.json",
+    "--summary-out",
+    "logs/test-runs/run_t08_001/r5_summary.json",
+    "--max-attempts",
+    "2",
+    "--base-delay-s",
+    "0.01",
+    "--max-workers",
+    "2"
+  ],
+  "returncode": 1,
+  "stdout": "{\"total\": 2, \"failed\": 1, \"output\": \"logs/test-runs/run_t08_001/r5_results.json\", \"segments\": \"logs/test-runs/run_t08_001/r5_segments.json\", \"summary\": \"logs/test-runs/run_t08_001/r5_summary.json\"}\n",
+  "stderr": ""
+}
