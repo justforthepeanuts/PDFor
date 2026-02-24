@@ -85,34 +85,34 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T03 — Command Orchestration (Phase 2)
 
-- [ ] **T03.1** Implement deterministic command builder for required args:  
+- [x] **T03.1** Implement deterministic command builder for required args:  
   `--lang-in ja --lang-out ru --output <dir>`.  
-  - Priority: P0 | Type: Build | Status: TODO  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T02.5  
   - Maps to: R3, R4, R7
 
-- [ ] **T03.2** Add service-selection strategy and config (`--openai`, `--deepl`, `--google`, etc.).  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T03.2** Add service-selection strategy and config (`--openai`, `--deepl`, `--google`, etc.).  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T03.1, T01.3  
   - Maps to: R3, R5
 
-- [ ] **T03.3** Add optional partial rerun support (`--pages`).  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T03.3** Add optional partial rerun support (`--pages`).  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T03.1  
   - Maps to: R7
 
-- [ ] **T03.4** Add concurrency controls (`--pool-max-workers`) with safe defaults.  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T03.4** Add concurrency controls (`--pool-max-workers`) with safe defaults.  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T03.1  
   - Maps to: R1, R5
 
-- [ ] **T03.5** Add quality controls via prompt/glossary/font config.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T03.5** Add quality controls via prompt/glossary/font config.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T03.1  
   - Maps to: R3, R4
 
-- [ ] **T03.6** Persist full command/audit metadata per run.  
-  - Priority: P1 | Type: Ops | Status: TODO  
+- [x] **T03.6** Persist full command/audit metadata per run.  
+  - Priority: P1 | Type: Ops | Status: DONE  
   - Depends on: T03.1  
   - Maps to: R5, R7
 

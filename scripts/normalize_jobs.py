@@ -42,6 +42,9 @@ def normalize(payload: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "service": service,
                 "page_range": page_range,
                 "pool_max_workers": payload.get("pool_max_workers", 2),
+                "prompt_path": payload.get("prompt_path"),
+                "glossary_path": payload.get("glossary_path"),
+                "primary_font": payload.get("primary_font"),
             }
         )
     return jobs
