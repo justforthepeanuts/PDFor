@@ -135,13 +135,13 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T04.2  
   - Maps to: R3, R5
 
-- [ ] **T04.4** Implement large-file safeguards (page chunking + worker caps).  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T04.4** Implement large-file safeguards (page chunking + worker caps).  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T04.1  
   - Maps to: R2, R5
 
-- [ ] **T04.5** Ensure atomic outputs and no corrupted partial PDFs on interruption.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T04.5** Ensure atomic outputs and no corrupted partial PDFs on interruption.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T04.1  
   - Maps to: R5
 

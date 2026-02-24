@@ -1,4 +1,4 @@
-# Resilience & Fallback Policy (T04.1..T04.3)
+# Resilience & Fallback Policy (T04.1..T04.5)
 
 ## Error taxonomy (T04.1)
 - `validation_error`: malformed payload, missing files, unsupported options.
@@ -18,3 +18,11 @@
 - On retry exhaustion for retryable errors, switch to next service from configured `fallback_order`.
 - Preserve progress by recording per-job state after each attempt and continuing to the next job regardless of previous job failure.
 - Output result includes: attempts, service transitions, final status, and failure reason.
+
+## Large-file safeguards (T04.4)
+- Chunking utility: `scripts/plan_page_chunks.py` splits `all` page jobs into bounded ranges (`--max-pages-per-part`, default 50).
+- Worker caps: `scripts/execute_with_resilience.py --max-workers <N>` limits concurrent job execution.
+
+## Atomic output safety (T04.5)
+- Execution results are written via temporary file + atomic replace in `atomic_write_json(...)`.
+- Guarantees no half-written JSON result file on interruption at write time.
