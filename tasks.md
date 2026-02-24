@@ -251,8 +251,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T05.1, T08.1  
   - Maps to: R2, R4
 
-- [ ] **T08.4** Publish production readiness checklist + known limitations + mitigations.  
-  - Priority: P1 | Type: Docs | Status: TODO  
+- [x] **T08.4** Publish production readiness checklist + known limitations + mitigations.  
+  - Priority: P1 | Type: Docs | Status: DONE  
   - Depends on: T08.2, T08.3  
   - Maps to: R5, R7
 

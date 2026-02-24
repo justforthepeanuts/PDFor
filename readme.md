@@ -43,6 +43,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/acceptance-matrix.md` for T08.1 requirement-to-scenario acceptance mapping (R1..R7)
 - `scripts/run_t08_scenarios.py`, `docs/t08-scenario-results.md`, and `logs/test-runs/run_t08_001/` for T08.2 executed scenario evidence
 - `samples/*.pdf`, `scripts/run_t08_visual_review.py`, `docs/t08-visual-review-results.md`, and `logs/test-runs/run_t08_visual_001/` for T08.3 visual-fidelity review evidence
+- `docs/production-readiness.md` for T08.4 release checklist, known limitations, and mitigations
 
 ## Task execution kickoff
 
