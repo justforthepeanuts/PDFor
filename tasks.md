@@ -212,8 +212,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T02.5, T03.1  
   - Maps to: R7
 
-- [ ] **T07.2** Add retry/fallback branches and standardized error notifications.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T07.2** Add retry/fallback branches and standardized error notifications.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T04.2, T04.3, T07.1  
   - Maps to: R5, R7
 
