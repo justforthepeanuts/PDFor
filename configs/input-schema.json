@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdfinator.local/schemas/input-schema.json",
+  "title": "PDFinator Intake Payload",
+  "type": "object",
+  "oneOf": [
+    {
+      "title": "Single file mode",
+      "required": ["mode", "input_file", "output_dir"],
+      "properties": {
+        "mode": { "const": "single" },
+        "input_file": { "type": "string", "minLength": 1 },
+        "output_dir": { "type": "string", "minLength": 1 },
+        "service": { "type": "string" },
+        "page_range": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    {
+      "title": "Multi-file batch mode",
+      "required": ["mode", "input_files", "output_dir"],
+      "properties": {
+        "mode": { "const": "batch" },
+        "input_files": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "output_dir": { "type": "string", "minLength": 1 },
+        "service": { "type": "string" },
+        "pool_max_workers": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    {
+      "title": "Directory descriptor mode",
+      "required": ["mode", "input_dir", "output_dir"],
+      "properties": {
+        "mode": { "const": "directory" },
+        "input_dir": { "type": "string", "minLength": 1 },
+        "output_dir": { "type": "string", "minLength": 1 },
+        "recursive": { "type": "boolean", "default": false },
+        "service": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  ]
+}
