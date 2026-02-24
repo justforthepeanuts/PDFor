@@ -193,8 +193,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T06.2, T03.5, T04.3  
   - Maps to: R3, R6
 
-- [ ] **T06.4** Implement reinsertion policy (replace vs annotation) with position fidelity.  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T06.4** Implement reinsertion policy (replace vs annotation) with position fidelity.  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T06.3  
   - Maps to: R4, R6
 

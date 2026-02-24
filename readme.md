@@ -34,6 +34,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/fidelity-regression.md`, `scripts/check_page_coherence.py`, `scripts/validate_regression_manifest.py`, and `configs/regression-samples.json` for T05.3/T05.4 overflow checks and regression sample validation
 - `docs/ocr-decision-tree.md`, `configs/ocr-tools.json`, and `scripts/ocr_adapter.py` for T06.1/T06.2 OCR routing and adapter integration
 - `docs/ocr-translation-routing.md` and `scripts/route_ocr_segments.py` for T06.3/T06.5 OCR-to-translation routing and low-confidence warning outputs
+- `docs/ocr-reinsertion-policy.md` and `scripts/plan_reinsertion.py` for T06.4 replace-vs-annotation reinsertion planning
 
 ## Task execution kickoff
 
