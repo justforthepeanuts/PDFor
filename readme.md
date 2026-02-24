@@ -39,6 +39,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `workflow/retry-fallback-workflow.json`, `docs/workflow-retry-notify.md`, and `scripts/format_error_notification.py` for T07.2 retry/fallback branching and standardized notifications
 - `workflow/publication-workflow.json`, `scripts/publish_outputs.py`, and `docs/workflow-output-publication.md` for T07.3 output publication (direct link/API/folder handoff)
 - `scripts/emit_trace_log.py` and `docs/workflow-trace-logging.md` for T07.4 structured trace logging at workflow branch boundaries
+- `workflow/page-rerun-workflow.json`, `scripts/apply_rerun_pages.py`, and `docs/workflow-page-rerun.md` for T07.5 targeted page-range reruns (`--pages`)
 
 ## Task execution kickoff
 

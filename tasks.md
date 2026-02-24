@@ -227,8 +227,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T00.3, T07.1  
   - Maps to: R5, R7
 
-- [ ] **T07.5** Add targeted page-range rerun path in workflow (`--pages`).  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T07.5** Add targeted page-range rerun path in workflow (`--pages`).  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T03.3, T07.1  
   - Maps to: R7
 
