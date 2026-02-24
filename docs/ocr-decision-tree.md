@@ -33,3 +33,6 @@
 ```bash
 python scripts/ocr_adapter.py sample.png --provider tesseract --dry-run
 ```
+
+
+See also: `docs/ocr-translation-routing.md` for T06.3/T06.5 routing and warnings outputs.

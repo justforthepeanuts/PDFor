@@ -188,8 +188,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T06.1  
   - Maps to: R6
 
-- [ ] **T06.3** Route OCR text through same translation controls (prompt/glossary/service fallback).  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T06.3** Route OCR text through same translation controls (prompt/glossary/service fallback).  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T06.2, T03.5, T04.3  
   - Maps to: R3, R6
 
@@ -198,8 +198,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T06.3  
   - Maps to: R4, R6
 
-- [ ] **T06.5** Add low-confidence OCR warnings to user-facing output.  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T06.5** Add low-confidence OCR warnings to user-facing output.  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T06.2  
   - Maps to: R6, R7
 
