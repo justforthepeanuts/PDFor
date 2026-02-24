@@ -1,0 +1,6 @@
+{
+  "mode": "single",
+  "input_file": "logs/test-runs/run_t08_001/inputs/single-ok.pdf",
+  "output_dir": "logs/test-runs/run_t08_001/out",
+  "run_id": "t08_single"
+}

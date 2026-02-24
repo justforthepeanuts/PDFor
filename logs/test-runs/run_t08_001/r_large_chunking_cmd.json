@@ -1,0 +1,16 @@
+{
+  "cmd": [
+    "python",
+    "scripts/plan_page_chunks.py",
+    "logs/test-runs/run_t08_001/jobs-large.json",
+    "--page-counts",
+    "logs/test-runs/run_t08_001/page-counts.json",
+    "--max-pages-per-part",
+    "50",
+    "--output",
+    "logs/test-runs/run_t08_001/r_large_chunked.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\"input_jobs\": 1, \"output_jobs\": 3, \"output\": \"logs/test-runs/run_t08_001/r_large_chunked.json\"}\n",
+  "stderr": ""
+}

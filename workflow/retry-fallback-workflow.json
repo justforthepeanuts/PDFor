@@ -1,0 +1,111 @@
+{
+  "name": "PDFor Retry/Fallback + Notifications",
+  "nodes": [
+    {
+      "id": "manual_trigger",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [180, 300],
+      "parameters": {}
+    },
+    {
+      "id": "validate_input",
+      "name": "Validate Input",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [420, 300],
+      "parameters": {
+        "command": "python scripts/validate_input.py {{$json.payload_path}}"
+      }
+    },
+    {
+      "id": "log_after_validate",
+      "name": "Log After Validate",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [660, 300],
+      "parameters": {
+        "command": "python scripts/emit_trace_log.py --run-id {{$json.run_id}} --trace-id {{$json.trace_id || $json.run_id}} --stage validate_input --status ok --log-file {{$json.trace_log_path || 'logs/trace/trace.jsonl'}}"
+      }
+    },
+    {
+      "id": "normalize_jobs",
+      "name": "Normalize Jobs",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [900, 300],
+      "parameters": {
+        "command": "python scripts/normalize_jobs.py {{$json.payload_path}} --output {{$json.jobs_path}}"
+      }
+    },
+    {
+      "id": "build_commands",
+      "name": "Build Commands",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1140, 300],
+      "parameters": {
+        "command": "python scripts/build_commands.py {{$json.jobs_path}} --service-config configs/services.json --output {{$json.commands_path}} --audit-out {{$json.audit_path}}"
+      }
+    },
+    {
+      "id": "execute_commands",
+      "name": "Execute With Resilience",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1380, 300],
+      "parameters": {
+        "command": "python scripts/execute_with_resilience.py {{$json.commands_path}} --service-config configs/services.json --output {{$json.results_path}} --segments-out {{$json.segments_path}} --summary-out {{$json.summary_path}} --max-attempts {{$json.max_attempts || 3}} --max-workers {{$json.max_workers || 2}}"
+      }
+    },
+    {
+      "id": "log_after_execute",
+      "name": "Log After Execute",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1620, 300],
+      "parameters": {
+        "command": "python scripts/emit_trace_log.py --run-id {{$json.run_id}} --trace-id {{$json.trace_id || $json.run_id}} --stage execute_with_resilience --status ok --log-file {{$json.trace_log_path || 'logs/trace/trace.jsonl'}}"
+      }
+    },
+    {
+      "id": "format_notification",
+      "name": "Format Notification",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1860, 300],
+      "parameters": {
+        "command": "python scripts/format_error_notification.py --summary {{$json.summary_path}} --segments {{$json.segments_path}} --run-id {{$json.run_id}} --output {{$json.notification_path || 'logs/notifications/latest.json'}}"
+      }
+    },
+    {
+      "id": "collect_artifacts",
+      "name": "Collect Artifacts",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2100, 300],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "return [{ json: { run_id: $json.run_id, trace_id: $json.trace_id || $json.run_id, trace_log_path: $json.trace_log_path || 'logs/trace/trace.jsonl', jobs_path: $json.jobs_path, commands_path: $json.commands_path, audit_path: $json.audit_path, results_path: $json.results_path, segments_path: $json.segments_path, summary_path: $json.summary_path, notification_path: $json.notification_path || 'logs/notifications/latest.json' } }];"
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": { "main": [[{ "node": "Validate Input", "type": "main", "index": 0 }]] },
+    "Validate Input": { "main": [[{ "node": "Log After Validate", "type": "main", "index": 0 }]] },
+    "Log After Validate": { "main": [[{ "node": "Normalize Jobs", "type": "main", "index": 0 }]] },
+    "Normalize Jobs": { "main": [[{ "node": "Build Commands", "type": "main", "index": 0 }]] },
+    "Build Commands": { "main": [[{ "node": "Execute With Resilience", "type": "main", "index": 0 }]] },
+    "Execute With Resilience": { "main": [[{ "node": "Log After Execute", "type": "main", "index": 0 }]] },
+    "Log After Execute": { "main": [[{ "node": "Format Notification", "type": "main", "index": 0 }]] },
+    "Format Notification": { "main": [[{ "node": "Collect Artifacts", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "version": "t07.4-trace-logging"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "mode": "batch",
+  "input_files": [
+    "logs/test-runs/run_t08_001/inputs/batch-ok.pdf",
+    "logs/test-runs/run_t08_001/inputs/missing.pdf"
+  ],
+  "output_dir": "logs/test-runs/run_t08_001/out",
+  "run_id": "t08_batch"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "run_id": "t08_single",
+    "job_id": "job_0001",
+    "file_id": "file_a0ae0b4082f99dcc",
+    "input_file": "logs/test-runs/run_t08_001/inputs/single-ok.pdf",
+    "output_dir": "logs/test-runs/run_t08_001/out",
+    "lang_in": "ja",
+    "lang_out": "ru",
+    "service": "default",
+    "page_range": "all",
+    "pool_max_workers": 2,
+    "prompt_path": null,
+    "glossary_path": null,
+    "primary_font": null
+  }
+]

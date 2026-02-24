@@ -1,0 +1,10 @@
+{
+  "cmd": [
+    "python",
+    "scripts/validate_input.py",
+    "logs/test-runs/run_t08_001/payload-single.json"
+  ],
+  "returncode": 0,
+  "stdout": "VALIDATION_OK\n",
+  "stderr": ""
+}

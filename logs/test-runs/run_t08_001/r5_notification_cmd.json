@@ -1,0 +1,17 @@
+{
+  "cmd": [
+    "python",
+    "scripts/format_error_notification.py",
+    "--summary",
+    "logs/test-runs/run_t08_001/r5_summary.json",
+    "--segments",
+    "logs/test-runs/run_t08_001/r5_segments.json",
+    "--run-id",
+    "t08_res",
+    "--output",
+    "logs/test-runs/run_t08_001/r5_notification.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\"status\": \"PARTIAL_FAILURE\", \"severity\": \"WARN\", \"output\": \"logs/test-runs/run_t08_001/r5_notification.json\"}\n",
+  "stderr": ""
+}
