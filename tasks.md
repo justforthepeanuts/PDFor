@@ -236,8 +236,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T08 — Verification & Readiness (Phase 7)
 
-- [ ] **T08.1** Create acceptance test matrix mapped to R1..R7.  
-  - Priority: P0 | Type: Test | Status: TODO  
+- [x] **T08.1** Create acceptance test matrix mapped to R1..R7.  
+  - Priority: P0 | Type: Test | Status: DONE  
   - Depends on: T07.1, T07.2, T07.3  
   - Maps to: R1, R2, R3, R4, R5, R6, R7
 
