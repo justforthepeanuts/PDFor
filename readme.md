@@ -41,6 +41,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `scripts/emit_trace_log.py` and `docs/workflow-trace-logging.md` for T07.4 structured trace logging at workflow branch boundaries
 - `workflow/page-rerun-workflow.json`, `scripts/apply_rerun_pages.py`, and `docs/workflow-page-rerun.md` for T07.5 targeted page-range reruns (`--pages`)
 - `docs/acceptance-matrix.md` for T08.1 requirement-to-scenario acceptance mapping (R1..R7)
+- `scripts/run_t08_scenarios.py`, `docs/t08-scenario-results.md`, and `logs/test-runs/run_t08_001/` for T08.2 executed scenario evidence
 
 ## Task execution kickoff
 

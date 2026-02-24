@@ -1,0 +1,20 @@
+{
+  "run_id": "t08_res",
+  "status": "PARTIAL_FAILURE",
+  "severity": "WARN",
+  "message": "Run t08_res completed with partial failures: 1/2 passed, 1 failed.",
+  "summary": {
+    "total": 2,
+    "success": 1,
+    "failed": 1,
+    "partial_failure": true
+  },
+  "problem_segments": [
+    {
+      "job_id": "job_fail",
+      "file_id": "f_fail",
+      "page_range": "2-3",
+      "failure_reason": "api_rate_limit"
+    }
+  ]
+}

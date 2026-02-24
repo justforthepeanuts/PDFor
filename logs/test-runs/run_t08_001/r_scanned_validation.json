@@ -1,0 +1,10 @@
+{
+  "cmd": [
+    "python",
+    "scripts/validate_input.py",
+    "logs/test-runs/run_t08_001/payload-scanned.json"
+  ],
+  "returncode": 1,
+  "stdout": "VALIDATION_FAILED\n- Scanned-page heuristic triggered for logs/test-runs/run_t08_001/inputs/scanned.pdf; pre-OCR is required before translation\n",
+  "stderr": ""
+}

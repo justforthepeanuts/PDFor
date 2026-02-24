@@ -241,8 +241,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T07.1, T07.2, T07.3  
   - Maps to: R1, R2, R3, R4, R5, R6, R7
 
-- [ ] **T08.2** Execute scenario tests: single file, batch, scanned warning, large file, rate limit, partial failure continuity.  
-  - Priority: P0 | Type: Test | Status: TODO  
+- [x] **T08.2** Execute scenario tests: single file, batch, scanned warning, large file, rate limit, partial failure continuity.  
+  - Priority: P0 | Type: Test | Status: DONE  
   - Depends on: T08.1  
   - Maps to: R1, R5, R7
 

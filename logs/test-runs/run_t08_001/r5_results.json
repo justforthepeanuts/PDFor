@@ -1,0 +1,50 @@
+[
+  {
+    "run_id": "t08_res",
+    "job_id": "job_ok",
+    "file_id": "f_ok",
+    "input_file": "ok.pdf",
+    "page_range": "1-1",
+    "chunked_from": null,
+    "attempts": [
+      {
+        "service": "default",
+        "attempt": 1,
+        "returncode": 0,
+        "error_class": null,
+        "command": "python -c print('ok')"
+      }
+    ],
+    "status": "success",
+    "final_service": "default"
+  },
+  {
+    "run_id": "t08_res",
+    "job_id": "job_fail",
+    "file_id": "f_fail",
+    "input_file": "fail.pdf",
+    "page_range": "2-3",
+    "chunked_from": null,
+    "attempts": [
+      {
+        "service": "default",
+        "attempt": 1,
+        "returncode": 75,
+        "error_class": "api_rate_limit",
+        "command": "python -c \"import sys;sys.stderr.write('429 rate limit');sys.exit(75)\"",
+        "stderr": "429 rate limit"
+      },
+      {
+        "service": "default",
+        "attempt": 2,
+        "returncode": 75,
+        "error_class": "api_rate_limit",
+        "command": "python -c \"import sys;sys.stderr.write('429 rate limit');sys.exit(75)\"",
+        "stderr": "429 rate limit"
+      }
+    ],
+    "status": "failed",
+    "failure_reason": "api_rate_limit",
+    "final_service": "default"
+  }
+]
