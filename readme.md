@@ -37,6 +37,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/ocr-reinsertion-policy.md` and `scripts/plan_reinsertion.py` for T06.4 replace-vs-annotation reinsertion planning
 - `workflow/baseline-workflow.json` and `docs/workflow-baseline.md` for T07.1 baseline n8n flow assembly
 - `workflow/retry-fallback-workflow.json`, `docs/workflow-retry-notify.md`, and `scripts/format_error_notification.py` for T07.2 retry/fallback branching and standardized notifications
+- `workflow/publication-workflow.json`, `scripts/publish_outputs.py`, and `docs/workflow-output-publication.md` for T07.3 output publication (direct link/API/folder handoff)
 
 ## Task execution kickoff
 
