@@ -32,6 +32,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/resilience-policy.md`, `scripts/execute_with_resilience.py`, and `scripts/plan_page_chunks.py` for retry/backoff, fallback execution, large-file chunking, atomic result writes, and partial-failure reporting
 - `docs/fidelity-checklist.md` and `scripts/verify_bilingual_artifacts.py` for measurable fidelity checks and bilingual output verification hooks
 - `docs/fidelity-regression.md`, `scripts/check_page_coherence.py`, `scripts/validate_regression_manifest.py`, and `configs/regression-samples.json` for T05.3/T05.4 overflow checks and regression sample validation
+- `docs/ocr-decision-tree.md`, `configs/ocr-tools.json`, and `scripts/ocr_adapter.py` for T06.1/T06.2 OCR routing and adapter integration
 
 ## Task execution kickoff
 

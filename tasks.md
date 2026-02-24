@@ -178,13 +178,13 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T06 — OCR & Embedded Image Text (Phase 5)
 
-- [ ] **T06.1** Define OCR decision tree for scanned pages and image-text regions.  
-  - Priority: P0 | Type: Docs | Status: TODO  
+- [x] **T06.1** Define OCR decision tree for scanned pages and image-text regions.  
+  - Priority: P0 | Type: Docs | Status: DONE  
   - Depends on: T02.4  
   - Maps to: R6
 
-- [ ] **T06.2** Implement OCR preprocessing integration path (tool-agnostic adapter).  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T06.2** Implement OCR preprocessing integration path (tool-agnostic adapter).  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T06.1  
   - Maps to: R6
 
