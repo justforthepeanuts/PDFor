@@ -154,13 +154,13 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T05 — Fidelity Controls (Phase 4)
 
-- [ ] **T05.1** Define measurable fidelity checklist (formulas, tables, lists, TOC, headers/footers/page numbers).  
-  - Priority: P0 | Type: Docs | Status: TODO  
+- [x] **T05.1** Define measurable fidelity checklist (formulas, tables, lists, TOC, headers/footers/page numbers).  
+  - Priority: P0 | Type: Docs | Status: DONE  
   - Depends on: T03.1  
   - Maps to: R2, R4
 
-- [ ] **T05.2** Implement bilingual artifact policy and output verification hooks.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T05.2** Implement bilingual artifact policy and output verification hooks.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T03.1  
   - Maps to: R4
 
