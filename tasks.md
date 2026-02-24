@@ -164,13 +164,13 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T03.1  
   - Maps to: R4
 
-- [ ] **T05.3** Add overflow/page-coherence checks for longer Russian content.  
-  - Priority: P1 | Type: Test | Status: TODO  
+- [x] **T05.3** Add overflow/page-coherence checks for longer Russian content.  
+  - Priority: P1 | Type: Test | Status: DONE  
   - Depends on: T05.1, T05.2  
   - Maps to: R4
 
-- [ ] **T05.4** Add regression samples for table-heavy/formula-heavy/multi-column PDFs.  
-  - Priority: P1 | Type: Test | Status: TODO  
+- [x] **T05.4** Add regression samples for table-heavy/formula-heavy/multi-column PDFs.  
+  - Priority: P1 | Type: Test | Status: DONE  
   - Depends on: T05.1  
   - Maps to: R2, R4
 
