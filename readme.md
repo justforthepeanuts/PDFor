@@ -26,6 +26,8 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/runtime-baseline.md` (T01.1)
 - `docs/env-vars.md` (T01.3)
 - `docs/command-template.md` (T01.4)
+- `docs/intake-validation.md` (T02.1..T02.5)
+- `configs/input-schema.json`, `scripts/validate_input.py`, and `scripts/normalize_jobs.py` for intake checks and queue payload normalization
 
 ## Task execution kickoff
 

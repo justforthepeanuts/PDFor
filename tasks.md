@@ -56,28 +56,28 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T02 — Intake & Validation (Phase 1)
 
-- [ ] **T02.1** Define input schema for single file, multi-file batch, and directory payload modes.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T02.1** Define input schema for single file, multi-file batch, and directory payload modes.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T01.4  
   - Maps to: R1, R7
 
-- [ ] **T02.2** Implement PDF validation (MIME/ext check + readable file guard).  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T02.2** Implement PDF validation (MIME/ext check + readable file guard).  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T02.1  
   - Maps to: R1
 
-- [ ] **T02.3** Implement corrupted/password-protected detection and explicit error messages.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T02.3** Implement corrupted/password-protected detection and explicit error messages.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T02.2  
   - Maps to: R1, R5
 
-- [ ] **T02.4** Add scanned-page heuristic; warn and route to OCR-preprocess policy.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T02.4** Add scanned-page heuristic; warn and route to OCR-preprocess policy.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T02.2  
   - Maps to: R1, R6
 
-- [ ] **T02.5** Normalize accepted inputs into queue-ready job payloads.  
-  - Priority: P1 | Type: Build | Status: TODO  
+- [x] **T02.5** Normalize accepted inputs into queue-ready job payloads.  
+  - Priority: P1 | Type: Build | Status: DONE  
   - Depends on: T02.1, T02.2  
   - Maps to: R1, R7
 
