@@ -120,18 +120,18 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T04 — Resilience & Fallback (Phase 3)
 
-- [ ] **T04.1** Build error taxonomy (validation, API rate limit, transient network, OOM, file-level failure).  
-  - Priority: P0 | Type: Docs | Status: TODO  
+- [x] **T04.1** Build error taxonomy (validation, API rate limit, transient network, OOM, file-level failure).  
+  - Priority: P0 | Type: Docs | Status: DONE  
   - Depends on: T03.6  
   - Maps to: R5
 
-- [ ] **T04.2** Implement retry policy with backoff for transient/API failures.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T04.2** Implement retry policy with backoff for transient/API failures.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T04.1  
   - Maps to: R5
 
-- [ ] **T04.3** Implement translation service fallback chain preserving progress.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T04.3** Implement translation service fallback chain preserving progress.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T04.2  
   - Maps to: R3, R5
 
