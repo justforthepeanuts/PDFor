@@ -145,8 +145,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T04.1  
   - Maps to: R5
 
-- [ ] **T04.6** Continue unaffected files/pages on partial failures and report problem segments.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T04.6** Continue unaffected files/pages on partial failures and report problem segments.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T04.3, T04.5  
   - Maps to: R5
 

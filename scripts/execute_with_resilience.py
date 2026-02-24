@@ -62,6 +62,9 @@ def _execute_one_record(
         "run_id": rec.get("run_id"),
         "job_id": rec.get("job_id"),
         "file_id": rec.get("file_id"),
+        "input_file": rec.get("input_file"),
+        "page_range": rec.get("page_range", "all"),
+        "chunked_from": rec.get("chunked_from"),
         "attempts": [],
         "status": "failed",
     }
@@ -139,6 +142,37 @@ def execute_records(
     return [by_idx[i] for i in range(len(records))]
 
 
+def build_problem_segments(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    segments: List[Dict[str, Any]] = []
+    for row in results:
+        if row.get("status") == "success":
+            continue
+        segments.append(
+            {
+                "run_id": row.get("run_id"),
+                "job_id": row.get("job_id"),
+                "file_id": row.get("file_id"),
+                "input_file": row.get("input_file"),
+                "page_range": row.get("page_range"),
+                "chunked_from": row.get("chunked_from"),
+                "failure_reason": row.get("failure_reason", "unknown"),
+                "final_service": row.get("final_service"),
+                "attempt_count": len(row.get("attempts", [])),
+            }
+        )
+    return segments
+
+
+def build_summary(results: List[Dict[str, Any]]) -> Dict[str, Any]:
+    failed = sum(1 for r in results if r.get("status") != "success")
+    return {
+        "total": len(results),
+        "success": len(results) - failed,
+        "failed": failed,
+        "partial_failure": failed > 0,
+    }
+
+
 def atomic_write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile("w", encoding="utf-8", delete=False, dir=path.parent) as tmp:
@@ -152,6 +186,8 @@ def main() -> int:
     parser.add_argument("records", type=Path, help="Command records JSON from build_commands.py")
     parser.add_argument("--service-config", type=Path, default=Path("configs/services.json"))
     parser.add_argument("--output", type=Path, default=Path("logs/execution-results.json"))
+    parser.add_argument("--segments-out", type=Path, default=Path("logs/problem-segments.json"))
+    parser.add_argument("--summary-out", type=Path, default=Path("logs/execution-summary.json"))
     parser.add_argument("--max-attempts", type=int, default=3)
     parser.add_argument("--base-delay-s", type=float, default=0.1)
     parser.add_argument("--max-workers", type=int, default=2)
@@ -172,11 +208,25 @@ def main() -> int:
         max_workers=max(1, args.max_workers),
     )
 
-    atomic_write_json(args.output, results)
+    segments = build_problem_segments(results)
+    summary = build_summary(results)
 
-    failed = sum(1 for r in results if r["status"] != "success")
-    print(json.dumps({"total": len(results), "failed": failed, "output": str(args.output)}))
-    return 1 if failed else 0
+    atomic_write_json(args.output, results)
+    atomic_write_json(args.segments_out, segments)
+    atomic_write_json(args.summary_out, summary)
+
+    print(
+        json.dumps(
+            {
+                "total": summary["total"],
+                "failed": summary["failed"],
+                "output": str(args.output),
+                "segments": str(args.segments_out),
+                "summary": str(args.summary_out),
+            }
+        )
+    )
+    return 1 if summary["failed"] else 0
 
 
 if __name__ == "__main__":

@@ -29,7 +29,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/intake-validation.md` (T02.1..T02.5)
 - `configs/input-schema.json`, `scripts/validate_input.py`, and `scripts/normalize_jobs.py` for intake checks and queue payload normalization
 - `configs/services.json`, `scripts/build_commands.py`, and `docs/command-orchestration.md` for deterministic command generation and audit logging
-- `docs/resilience-policy.md`, `scripts/execute_with_resilience.py`, and `scripts/plan_page_chunks.py` for retry/backoff, fallback execution, large-file chunking, and atomic result writes
+- `docs/resilience-policy.md`, `scripts/execute_with_resilience.py`, and `scripts/plan_page_chunks.py` for retry/backoff, fallback execution, large-file chunking, atomic result writes, and partial-failure reporting
 
 ## Task execution kickoff
 

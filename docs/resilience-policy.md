@@ -26,3 +26,9 @@
 ## Atomic output safety (T04.5)
 - Execution results are written via temporary file + atomic replace in `atomic_write_json(...)`.
 - Guarantees no half-written JSON result file on interruption at write time.
+
+
+## Partial-failure continuation and reporting (T04.6)
+- Executor always processes every queued record (affected failures do not abort unaffected records).
+- Failed jobs/pages are extracted to `problem-segments` report containing `file_id`, `input_file`, `page_range`, `chunked_from`, and `failure_reason`.
+- Separate summary artifact reports total/success/failed counts and `partial_failure` boolean for workflow decisions.
