@@ -13,18 +13,18 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T00 — Project Setup & Governance
 
-- [ ] **T00.1** Create repository structure for workflow artifacts (`/workflow`, `/scripts`, `/configs`, `/docs`, `/logs`).  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T00.1** Create repository structure for workflow artifacts (`/workflow`, `/scripts`, `/configs`, `/docs`, `/logs`).  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: none  
   - Maps to: R7
 
-- [ ] **T00.2** Define artifact naming/versioning convention (`<input>-ja_ru-<timestamp>-bilingual.pdf`).  
-  - Priority: P1 | Type: Docs | Status: TODO  
+- [x] **T00.2** Define artifact naming/versioning convention (`<input>-ja_ru-<timestamp>-bilingual.pdf`).  
+  - Priority: P1 | Type: Docs | Status: DONE  
   - Depends on: T00.1  
   - Maps to: R4, R7
 
-- [ ] **T00.3** Add run ID correlation standard (`run_id`, `job_id`, `file_id`, `page_range`) across nodes/logs.  
-  - Priority: P1 | Type: Ops | Status: TODO  
+- [x] **T00.3** Add run ID correlation standard (`run_id`, `job_id`, `file_id`, `page_range`) across nodes/logs.  
+  - Priority: P1 | Type: Ops | Status: DONE  
   - Depends on: T00.1  
   - Maps to: R5, R7
 
@@ -32,23 +32,23 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T01 — Runtime Baseline (Phase 0)
 
-- [ ] **T01.1** Pin runtime options and document supported modes: local Python + Docker (`byaidu/pdf2zh`).  
-  - Priority: P0 | Type: Ops | Status: TODO  
+- [x] **T01.1** Pin runtime options and document supported modes: local Python + Docker (`byaidu/pdf2zh`).  
+  - Priority: P0 | Type: Ops | Status: DONE  
   - Depends on: T00.1  
   - Maps to: R7
 
 - [ ] **T01.2** Validate CLI availability and flags (`pdf2zh-next -h` / language/service/output/page options).  
-  - Priority: P0 | Type: Test | Status: TODO  
+  - Priority: P0 | Type: Test | Status: BLOCKED  
   - Depends on: T01.1  
   - Maps to: R3, R4, R7
 
-- [ ] **T01.3** Define required secrets/env vars (`OPENAI_API_KEY`, `DEEPL_AUTH_KEY`, `HF_ENDPOINT`, etc.).  
-  - Priority: P0 | Type: Ops | Status: TODO  
+- [x] **T01.3** Define required secrets/env vars (`OPENAI_API_KEY`, `DEEPL_AUTH_KEY`, `HF_ENDPOINT`, etc.).  
+  - Priority: P0 | Type: Ops | Status: DONE  
   - Depends on: T01.1  
   - Maps to: R3, R5, R7
 
-- [ ] **T01.4** Create command template document for n8n Execute Command node.  
-  - Priority: P1 | Type: Docs | Status: TODO  
+- [x] **T01.4** Create command template document for n8n Execute Command node.  
+  - Priority: P1 | Type: Docs | Status: DONE  
   - Depends on: T01.2, T01.3  
   - Maps to: R7
 
