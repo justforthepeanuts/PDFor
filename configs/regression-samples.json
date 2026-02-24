@@ -1,0 +1,20 @@
+[
+  {
+    "sample_id": "formula-heavy-01",
+    "category": "formula-heavy",
+    "input_file": "samples/sample_formula_heavy.pdf",
+    "expected_checks": ["math_tokens", "layout_shift", "bilingual_name"]
+  },
+  {
+    "sample_id": "table-multicol-01",
+    "category": "table-heavy-multicolumn",
+    "input_file": "samples/sample_table_multicolumn.pdf",
+    "expected_checks": ["table_cell_mapping", "layout_shift", "header_footer"]
+  },
+  {
+    "sample_id": "multicol-01",
+    "category": "multi-column",
+    "input_file": "samples/sample_multicolumn.pdf",
+    "expected_checks": ["reading_order", "layout_shift", "toc_consistency"]
+  }
+]
