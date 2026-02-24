@@ -35,6 +35,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `docs/ocr-decision-tree.md`, `configs/ocr-tools.json`, and `scripts/ocr_adapter.py` for T06.1/T06.2 OCR routing and adapter integration
 - `docs/ocr-translation-routing.md` and `scripts/route_ocr_segments.py` for T06.3/T06.5 OCR-to-translation routing and low-confidence warning outputs
 - `docs/ocr-reinsertion-policy.md` and `scripts/plan_reinsertion.py` for T06.4 replace-vs-annotation reinsertion planning
+- `workflow/baseline-workflow.json` and `docs/workflow-baseline.md` for T07.1 baseline n8n flow assembly
 
 ## Task execution kickoff
 

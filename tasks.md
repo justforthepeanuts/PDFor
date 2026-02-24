@@ -207,8 +207,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
 
 ## T07 — n8n Workflow Assembly (Phase 6)
 
-- [ ] **T07.1** Build baseline n8n workflow JSON: trigger → validate → build command → execute → collect artifacts.  
-  - Priority: P0 | Type: Build | Status: TODO  
+- [x] **T07.1** Build baseline n8n workflow JSON: trigger → validate → build command → execute → collect artifacts.  
+  - Priority: P0 | Type: Build | Status: DONE  
   - Depends on: T02.5, T03.1  
   - Maps to: R7
 
