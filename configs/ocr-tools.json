@@ -1,0 +1,17 @@
+{
+  "default_provider": "tesseract",
+  "providers": {
+    "tesseract": {
+      "binary": "tesseract",
+      "args": ["{input}", "{output_base}", "-l", "jpn+eng"]
+    },
+    "easyocr": {
+      "binary": "python",
+      "args": ["-m", "easyocr", "--input", "{input}", "--output", "{output_json}"]
+    },
+    "paddleocr": {
+      "binary": "paddleocr",
+      "args": ["--image_dir", "{input}", "--lang", "japan", "--output", "{output_json}"]
+    }
+  }
+}
