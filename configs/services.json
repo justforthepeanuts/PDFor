@@ -1,0 +1,10 @@
+{
+  "service_flags": {
+    "default": null,
+    "openai": "--openai",
+    "deepl": "--deepl",
+    "google": "--google",
+    "ollama": "--ollama"
+  },
+  "fallback_order": ["openai", "deepl", "google", "ollama"]
+}
