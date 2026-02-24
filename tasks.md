@@ -222,8 +222,8 @@ This task list operationalizes `plan.md` into implementable work items for the n
   - Depends on: T07.1  
   - Maps to: R4, R7
 
-- [ ] **T07.4** Add structured logs and trace IDs at each branch boundary.  
-  - Priority: P1 | Type: Ops | Status: TODO  
+- [x] **T07.4** Add structured logs and trace IDs at each branch boundary.  
+  - Priority: P1 | Type: Ops | Status: DONE  
   - Depends on: T00.3, T07.1  
   - Maps to: R5, R7
 

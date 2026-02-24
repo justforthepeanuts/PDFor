@@ -38,6 +38,7 @@ This repository contains planning and execution artifacts for an n8n-driven PDF 
 - `workflow/baseline-workflow.json` and `docs/workflow-baseline.md` for T07.1 baseline n8n flow assembly
 - `workflow/retry-fallback-workflow.json`, `docs/workflow-retry-notify.md`, and `scripts/format_error_notification.py` for T07.2 retry/fallback branching and standardized notifications
 - `workflow/publication-workflow.json`, `scripts/publish_outputs.py`, and `docs/workflow-output-publication.md` for T07.3 output publication (direct link/API/folder handoff)
+- `scripts/emit_trace_log.py` and `docs/workflow-trace-logging.md` for T07.4 structured trace logging at workflow branch boundaries
 
 ## Task execution kickoff
 
